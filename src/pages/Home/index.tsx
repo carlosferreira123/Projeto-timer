@@ -1,10 +1,14 @@
 import { Play } from "phosphor-react";
 import { CountdowContainer, FormContainer, HomeContainer, MinutesAmountInput, Separator, StartCountdownButton, TaskInput } from "./styles";
+import { useState } from "react";
 
 export function Home() {
- function handleSubmit (event) {
-   
- }
+function handleSubmit(event) {
+    
+  event.target.task.value
+
+} 
+ 
 
   return (
     <HomeContainer>
@@ -12,11 +16,12 @@ export function Home() {
          <FormContainer>
           <label htmlFor="Task">Vou trabalar em</label>
           <TaskInput 
-          id="task" 
+          id="task"
+          name="task" 
           list="task-suggestions"
           placeholder="Dê um nome para o seu projeto"
-          onChange={(e) => setTask(e.target.value)}
-          value={task}
+        
+          
           />
             
           <datalist id="task-suggestions">
